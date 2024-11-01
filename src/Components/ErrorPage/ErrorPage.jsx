@@ -1,4 +1,4 @@
-import { useNavigate, useRouteError } from "react-router-dom";
+import { Link, useNavigate, useRouteError } from "react-router-dom";
 
 
 const ErrorPage = () => {
@@ -18,7 +18,10 @@ const ErrorPage = () => {
                 error.status === 404 && <div>
                     <h3>Page Not Found</h3>
                     <p>Go Back Where You From</p>
-                    <button onClick={handleErrorBack} >Go Back</button>
+                    {/* ager page a jabe */}
+                    <button to="/" onClick={handleErrorBack} >Go Back</button> 
+                    {/* akdom Home a  cole jabe */}
+                    <Link to='/'><button>Home</button></Link>
                 </div>
             }
 
